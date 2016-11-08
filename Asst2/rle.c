@@ -39,10 +39,10 @@ char* encode (char* input){
 		}else{
 			charCount++;
 			
-			printf("%c : %d\n",  input[i], charCount);
+			//printf("%c : %d\n",  input[i], charCount);
 			int numberOfDigits = floor(log10(abs(charCount))) + 2;
 			outputSize += numberOfDigits;
-			printf("%d\n", numberOfDigits);
+			//printf("%d\n", numberOfDigits);
 			//fill the LL
 			tmp -> ch = input[i];
 			tmp -> amount = charCount;
@@ -74,7 +74,7 @@ char* encode (char* input){
 
 			strcat (output , numbers);
 
-			printf("before letter %s\n", output);
+			//printf("before letter %s\n", output);
 
 			z += strlen(numbers);
 
@@ -87,7 +87,7 @@ char* encode (char* input){
 
 			//output[z] = tmp -> ch;
 
-			printf("after: %s\n", output);
+			//printf("after: %s\n", output);
 
 			//z++;
 
