@@ -108,6 +108,7 @@ int main(int argc, char *argv[]){
 		arguments->place = place;
 		arguments->iteration = i;
 
+		//make thread
 		pthread_create(&pth[i], NULL, compressToFile,arguments);
 
 		place += segSize;
