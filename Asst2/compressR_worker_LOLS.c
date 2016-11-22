@@ -80,7 +80,9 @@ int main(int argc, char *argv[]){
 		
     	compressToFile(valIntoStruct);
 	}
-    
+	
+	free(valIntoStruct);
+	
     return 0;   
     
 }

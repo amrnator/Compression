@@ -50,11 +50,13 @@ int main(int argc, char *argv[]){
 	int place = 0; 					//used to save index where process leaves off/starts again
 	int i;
 	
+	//Creating child process
 	for(i = 0; i < childCount; i++){
 		pid_t child_pid = fork();
 		
 		segSize = floor(docLength/childCount);
 		
+		//Configuring Arguments for Child Processes
 	    char *argPassing[5];
 		printf("INPUT %s\n", input);
 		argPassing[0] = input;
@@ -71,6 +73,8 @@ int main(int argc, char *argv[]){
 	
 		argPassing[4] = fileName;
 		
+		
+		//Initializing the Child Processes to work on Compress_R_Worker_LOLS
 		printf("PASSING TO THE WORKER\n");
 		if(child_pid != 0){
 			
@@ -79,6 +83,9 @@ int main(int argc, char *argv[]){
 			exit(0);
 		}
 		
+		free(str1);
+		free(str2);
+		free(str3);
 		place += segSize;
 	}
 
