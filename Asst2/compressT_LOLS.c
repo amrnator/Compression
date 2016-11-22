@@ -115,7 +115,7 @@ int main(int argc, char *argv[]){
 	}
 
 	//wait for threads to finish
-
+    
 	printf("Waiting on process\n");
 
 	for(i = 0; i < threadCount; i++){
