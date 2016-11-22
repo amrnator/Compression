@@ -6,6 +6,7 @@
 #include <pthread.h>
 #include <math.h>
 
+
 char * fileName;
 
 //struct for holding arguments for compressToFile
@@ -42,8 +43,10 @@ void compressToFile(void* arguments){
 	
 	strcpy(newFileName, fileName); 
 	sprintf(number, "%d", in->iteration + 1);
+	strcat(newFileName, "_LOLS");
 	strcat(newFileName, number);
-
+	char *formatName = filenameFormat(newFileName, NULL);
+	strcpy(newFileName, formatName);
 	printf("File name: %s\n", newFileName);
 
 	//create a new file with the name

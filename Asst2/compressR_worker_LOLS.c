@@ -34,11 +34,12 @@ void compressToFile(void* arguments){
 	
 	char * number = (char*)malloc(3);
 	char * newFileName = (char*)(malloc(fileNameSize));
-	
 	strcpy(newFileName, fileName); 
 	sprintf(number, "%d", in->iteration + 1);
+	strcat(newFileName, "_LOLS");
 	strcat(newFileName, number);
-
+	char *formatName = filenameFormat(newFileName, NULL);
+	strcpy(newFileName, formatName);
 	printf("File name: %s\n", newFileName);
 
 	//create a new file with the name

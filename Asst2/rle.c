@@ -124,8 +124,19 @@ char* encode (char* input){
 
 }
 
-
-
+char * filenameFormat(char *nameOfFile, char *type){
+	char string[250];
+	strcpy(string, nameOfFile);
+	int i;
+	for(i = 0; i < strlen(nameOfFile); i++){
+		if(string[i] == '.'){
+			string[i] = '_';
+		}
+	}
+	
+	char *ptr = string;
+	return ptr;
+}
 
 
 
